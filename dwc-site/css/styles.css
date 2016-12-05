@@ -1,50 +1,290 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 /*
   ================================GLOBAL=======================================
 */
 
 body {
-  background-color: #F7F3DB;
-  color: #343642;
-  font-family: 'Lora', serif;
   line-height: 1.5;
+  font-family: 'Lora', serif;
+  background-color: #fffff3;
+  color: #566270;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto', sans-serif;
+}
+
+.main-headline {
   text-transform: uppercase;
   letter-spacing: 3px;
   text-align: center;
+  margin-bottom: 50px;
+}
+
+article {
+  margin-bottom: 45px;
+}
+
+h2 {
+  font-family: 'Lora', serif;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 15px;
 }
 
 a {
-  color: #962D3E;
   text-decoration: none;
+  color: inherit;
+}
+
+.button {
+  border: 2px solid #a593e0;
+  border-radius: 50px;
+  padding: 15px 30px;
+  font-family: 'Roboto', sans-serif;
+  color: #a593e0;
+  transition: all 300ms;
+}
+
+.button:hover {
+  color: #fffff3;
+  background-color: #a593e0;
+  transition: all 300ms;
+}
+
+/* LAYOUT */
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.break {
+  margin: 100px auto;
+}
+
+.clearfix:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
 }
 
 /* HEADER */
-
 header {
-  background-color: #962D3E;
-  color: #F7F3DB;
+  padding: 20px 0;
+  font-family: 'Roboto', sans-serif;
+  background: #a593e0;
+  color: #fffff3;
 }
 
-header a {
-  color: #F7F3DB;
+header h1 {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 25px;
+}
+
+header nav {
+  display: inline-block;
+  float: right;
+  color: #566270;
+}
+
+header nav li {
+  display: inline-block;
+  margin-left: 20px;
+  line-height: 25px;
+}
+
+header nav a:hover {
+  border-bottom: 2px solid #566270;
+}
+
+header nav a.current {
+  border-bottom: 2px solid #566270;
 }
 
 /* FOOTER */
+footer {
+  background-color: #566270;
+  color: #fffff3;
+  padding: 75px 0;
+  padding-bottom: 120px;
+  font-size: 10px;
+  color: #22272c;
+}
+
+footer a {
+  text-decoration: underline;
+}
+
+footer .hours {
+  float: left;
+}
+
+footer .location {
+  float: right;
+}
+
+footer p:first-of-type {
+  clear: both;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 60px;
+}
 
 /*
   ================================INDEX================================
 */
 
+/* HERO */
+#hero {
+  background-image: url("../img/hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 480px;
+}
+
+#hero h1 {
+  font-size: 38px;
+  font-family: 'Lora', serif;
+  font-weight: bold;
+  color: #a593e0;
+  text-align: center;
+  padding-top: 160px;
+  margin-bottom: 100px;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+               0px 8px 13px rgba(0,0,0,0.1),
+               0px 18px 23px rgba(0,0,0,0.1);
+}
+
+#hero .button {
+  margin: 0 auto;
+  display: block;
+  width: 400px;
+  text-align: center;
+}
+
+/* TESTIMONIALS */
+
+blockquote {
+  background-color: #f6f4fb;
+  border-left: 8px solid #a593e0;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+blockquote:first-of-type {
+  width: 300px;
+  margin-right: 50px;
+  margin-bottom: 70px;
+  float: left;
+}
+
+blockquote:nth-of-type(2) {
+  width: 450px;
+  margin-bottom: 70px;
+  float: left;
+}
+
+blockquote:nth-of-type(3) {
+  width: 500px;
+  margin: 0 auto;
+  clear: both;
+}
+
+#cta .button {
+  display: inline-block;
+  width: 300px;
+  text-align: center;
+}
+
+#cta .button:first-of-type {
+  margin-right: 100px;
+  margin-left: 50px;
+}
+
+#cta .button:last-of-type {
+  margin-right: 45px;
+}
+
+
 /*
   ================================READERS================================
 */
 
+#faculty-readers h2, #peer-readers h2 {
+  margin-bottom: 30px;
+}
+
+.person {
+  float: left;
+  width: 33%;
+  margin-bottom: 50px;
+}
+
+.person:last-child {
+  margin-bottom: 0;
+}
+
 /*
   ================================FAQ================================
 */
+
 
 /*
   ================================EMPLOYMENT================================

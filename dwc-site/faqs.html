@@ -3,25 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>FAQs | Drexel Writing Center</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700|Roboto:400,400i,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>
 
     <header>
-      <h1><a href="index.html">Drexel Writing Center</a></h1>
-      <nav>
-        <ul>
-          <li><a href="index.html#hours">Hours and Location</a></li>
-          <li><a href="readers.html">Our Readers</a></li>
-          <li><a href="#">FAQs</a></li>
-          <li><a href="employment.html">Employment</a></li>
-        </ul>
-      </nav>
+      <div class="container">
+        <h1><a href="index.html">Drexel Writing Center</a></h1>
+        <nav>
+          <ul>
+            <li><a href="index.html#hours-location">Hours and Location</a></li>
+            <li><a href="readers.html">Our Readers</a></li>
+            <li><a href="#" class="current">FAQs</a></li>
+            <li><a href="employment.html">Employment</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <section id="faq">
+    <section id="faq" class="break container">
 
-      <h1>Frequently Asked Questions</h1>
+      <h1 class="main-headline">Frequently Asked Questions</h1>
 
       <article>
         <h2>Do I need to have a finished paper to come in?</h2>
@@ -88,21 +91,23 @@
 
     </section>
 
-    <footer>
-      <p>
-        Monday&ndash;Thursday: 9 a.m.&ndash;9 p.m. <br />
-        Friday: 9 a.m.&ndash;5 p.m. <br />
-        Saturday &amp; Sunday: limited hours when possible; check schedule
-      </p>
-      <p>
-        Drexel Writing Center <br />
-        MacAlister Hall, 0032 <br />
-        3250-60 Chestnut St. <br />
-        Philadelphia, PA 19104
-      </p>
-      <p>
-        To make an appointment, please visit our <a href="https://drexel.mywconline.com/">online scheduling system</a> or call 215.895.6633 during regular business hours.
-      </p>
+    <footer id="hours-location">
+      <div class="container">
+        <p>
+          To make an appointment, please visit our <a href="https://drexel.mywconline.com/">online scheduling system</a> or call 215.895.6633 during regular business hours.
+        </p>
+        <p class="hours">
+          Monday&ndash;Thursday: 9 a.m.&ndash;9 p.m. <br />
+          Friday: 9 a.m.&ndash;5 p.m. <br />
+          Saturday &amp; Sunday: limited hours when possible; check schedule
+        </p>
+        <p class="location">
+          Drexel Writing Center <br />
+          MacAlister Hall, 0032 <br />
+          3250-60 Chestnut St. <br />
+          Philadelphia, PA 19104
+        </p>
+      </div>
     </footer>
 
   </body>
